@@ -80,7 +80,7 @@ async def on_ready():
 
 @client.command()
 async def hello(ctx):
-    await ctx.send("Hello monkey")
+    await ctx.send("hello user")
 
 @client.command()
 async def patchnotes(ctx):
@@ -89,4 +89,4 @@ async def patchnotes(ctx):
 
 
 
-client.run('MTIwNDgxNTc0MDkxODY5Mzg5OA.GM-99f.B92SrbPaaOevQRsGEFLI9oRzV2-7njX5WRRPb0') 
+client.run('insert API key') 
