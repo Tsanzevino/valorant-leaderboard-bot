@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import certifi
 import os
-import requests
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium import webdriver
@@ -15,17 +14,16 @@ intents = discord.Intents.all()
 
 client = commands.Bot(command_prefix = '!', intents=intents) 
 
-#previous_patch_notes = None
 @client.command()
 async def scrape_patch_notes(ctx):
     # Initialize Chrome WebDriver
     driver = webdriver.Chrome()
 
-# Navigate to the Valorant news page
+    # Navigate to the Valorant news page
     driver.get('https://playvalorant.com/en-us/news/game-updates/')
 
     # Wait for dynamic content to load
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(5)
 
     # Get the HTML content after the page is fully loaded
     html_content = driver.page_source
@@ -38,8 +36,6 @@ async def scrape_patch_notes(ctx):
 
     # Get the href of the most recent news article
     recent_href = specific_div.get_attribute('href')
-
-    print("Most recent href:", recent_href)
 
     # Navigate to the most recent news article
     driver.get(recent_href)
@@ -57,8 +53,6 @@ async def scrape_patch_notes(ctx):
     div_in_href = new_page_soup.find('div', {'class': 'sectionWrapper NewsArticleContent-module--articleSectionWrapper--a5tPH'})
     text_content = div_in_href.get_text()
 
-    # Print or process the text content as needed
-    print(text_content)
 
     # Close the WebDriver
     driver.quit()
