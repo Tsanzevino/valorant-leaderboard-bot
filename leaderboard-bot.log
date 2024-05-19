@@ -1,0 +1,60 @@
+2024-05-19 05:17:49,679: WARNING => PyNaCl is not installed, voice will NOT be supported
+2024-05-19 05:17:49,680: INFO => logging in using static token
+2024-05-19 05:17:50,377: INFO => Shard ID None has connected to Gateway (Session ID: 6c083e59b44ef457ff651d08c6b67633).
+2024-05-19 05:17:52,382: INFO => 
+Patch Notes bot is active!
+--------------------------
+2024-05-19 05:17:54,171: ERROR => Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\zelda\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\zelda\OneDrive\Desktop\BountyBot\valorant-leaderboard-bot\valbot.py", line 89, in on_command_error
+    logging.info('Command "'+ ctx.command +'" called')
+TypeError: can only concatenate str (not "Command") to str
+2024-05-19 05:18:51,680: WARNING => PyNaCl is not installed, voice will NOT be supported
+2024-05-19 05:18:51,681: INFO => logging in using static token
+2024-05-19 05:18:52,380: INFO => Shard ID None has connected to Gateway (Session ID: c149596e198856e8defd255247a1ccbc).
+2024-05-19 05:18:54,394: INFO => 
+Patch Notes bot is active!
+--------------------------
+2024-05-19 05:18:57,492: INFO => Command "hello" called
+2024-05-19 05:18:57,493: INFO => Sent Message: Heyyyy, ZeldaFanta!
+2024-05-19 05:19:00,926: INFO => Command "patchnotes" called
+2024-05-19 05:19:00,926: INFO => Received command request for Patch Notes
+2024-05-19 05:19:07,961: INFO => Printing text: 05/14/24Game UpdatesVALORANT Patch Notes 8.09Share:Howdy, yfall. Jo-Ellen here with Patch Notes 8.09.Itfs a short one this week as we prepare for bigger things in the near future.As Brimstone likes to say: "I can't close the settings menu on my bracer. How do I\u2014oh, got it."AGENT UPDATESBrimstoneWefve done some small updates to Brimstonefs Sky Smoke (E) to ensure that it fully covers the area indicated by the UI when you are placing it. This should ensure that when the outer edge of the targeting UI covers a choke point that the spawned smoke will fully cover that area as well. This change includes a slight increase to the radius of Brimstonefs smoke that should make it match the smoke size of his peers like Omen.Sky Smoke (E)Radius increased 410 >>> 415UI targeting size updated so that outer edge properly reflects the size of the smokeBUG FIXESGameplay SystemsFixed an issue that resulted in you losing your crosshair profiles.While we can not recover lost crosshair profile settings, we are sincerely grateful for all the information you have provided to help us reach a swift resolution and will continue to monitor closely.If your newly created crosshair profiles still keep disappearing, please let Player Support know.Fixed an issue regarding Killed By feed on Combat Reports being incorrect.Fixed bullet tracers still being visible after being turned off in Settings if the player fires away from the map.Fixed an issue where the client would freeze after a game ends and would require a client restart to continue.
+2024-05-19 05:19:27,071: INFO => Received command request for Patch Notes
+2024-05-19 05:19:32,168: INFO => Printing text: 05/14/24Game UpdatesVALORANT Patch Notes 8.09Share:Howdy, yfall. Jo-Ellen here with Patch Notes 8.09.Itfs a short one this week as we prepare for bigger things in the near future.As Brimstone likes to say: "I can't close the settings menu on my bracer. How do I\u2014oh, got it."AGENT UPDATESBrimstoneWefve done some small updates to Brimstonefs Sky Smoke (E) to ensure that it fully covers the area indicated by the UI when you are placing it. This should ensure that when the outer edge of the targeting UI covers a choke point that the spawned smoke will fully cover that area as well. This change includes a slight increase to the radius of Brimstonefs smoke that should make it match the smoke size of his peers like Omen.Sky Smoke (E)Radius increased 410 >>> 415UI targeting size updated so that outer edge properly reflects the size of the smokeBUG FIXESGameplay SystemsFixed an issue that resulted in you losing your crosshair profiles.While we can not recover lost crosshair profile settings, we are sincerely grateful for all the information you have provided to help us reach a swift resolution and will continue to monitor closely.If your newly created crosshair profiles still keep disappearing, please let Player Support know.Fixed an issue regarding Killed By feed on Combat Reports being incorrect.Fixed bullet tracers still being visible after being turned off in Settings if the player fires away from the map.Fixed an issue where the client would freeze after a game ends and would require a client restart to continue.
+2024-05-19 05:23:13,235: WARNING => PyNaCl is not installed, voice will NOT be supported
+2024-05-19 05:23:13,236: INFO => logging in using static token
+2024-05-19 05:23:13,866: INFO => Shard ID None has connected to Gateway (Session ID: ca4e2fefd30873ff5a46ebd222d6e9be).
+2024-05-19 05:23:15,876: INFO => 
+Patch Notes bot is active!
+--------------------------
+2024-05-19 05:23:26,398: INFO => Command "echo" called
+2024-05-19 05:23:26,398: INFO => Sent Message: hellobot
+2024-05-19 05:24:25,703: WARNING => PyNaCl is not installed, voice will NOT be supported
+2024-05-19 05:24:25,704: INFO => logging in using static token
+2024-05-19 05:24:26,330: INFO => Shard ID None has connected to Gateway (Session ID: 6057f55fb184ad9bc4fb7c6b97342ff6).
+2024-05-19 05:24:28,337: INFO => 
+Patch Notes bot is active!
+--------------------------
+2024-05-19 05:24:36,170: INFO => Command "echo" called
+2024-05-19 05:24:36,170: INFO => Sent Message: what in the hell 
+2024-05-19 05:24:46,134: INFO => Command "echo" called
+2024-05-19 05:24:46,134: INFO => Sent Message: woah you can copy me ??? 
+2024-05-19 05:24:53,084: INFO => Command "echo" called
+2024-05-19 05:24:53,084: INFO => Sent Message: okay stop it now 
+2024-05-19 05:24:56,591: INFO => Command "echo" called
+2024-05-19 05:24:56,591: INFO => Sent Message: kys 
+2024-05-19 05:26:41,643: WARNING => PyNaCl is not installed, voice will NOT be supported
+2024-05-19 05:26:41,645: INFO => logging in using static token
+2024-05-19 05:26:42,268: INFO => Shard ID None has connected to Gateway (Session ID: 2edc63f114c9268a23933256c51edbab).
+2024-05-19 05:26:44,275: INFO => 
+Patch Notes bot is active!
+--------------------------
+2024-05-19 05:26:45,692: INFO => Command "boostego" called
+2024-05-19 05:26:45,692: INFO => Sent Message: kill yourself.
+2024-05-19 05:27:00,655: INFO => Command "echo" called
+2024-05-19 05:27:00,655: INFO => Sent Message: !boostego 
+2024-05-19 05:27:11,027: INFO => Command "echo" called
+2024-05-19 05:27:11,027: INFO => Sent Message: hmmmm 
