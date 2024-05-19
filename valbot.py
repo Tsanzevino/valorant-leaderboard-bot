@@ -3,10 +3,9 @@ from discord.ext import commands
 import certifi
 import os
 from bs4 import BeautifulSoup
+import discord.gateway
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-
-
 
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
@@ -30,15 +29,9 @@ async def scrape_patch_notes(ctx):
 
     # Parse the HTML content with BeautifulSoup
     soup = BeautifulSoup(html_content, 'html.parser')
-
-    #this finds the <a> tag with this class and gets the first href
-    specific_div = driver.find_element(By.CLASS_NAME, 'ContentListingCard-module--contentListingCard--JqMck')
-
-    # Get the href of the most recent news article
-    recent_href = specific_div.get_attribute('href')
-
+    
     # Navigate to the most recent news article
-    driver.get(recent_href)
+    driver.get("https://playvalorant.com" + soup.find(find_content_card)['href'])
 
     # Wait for the new page to load
     driver.implicitly_wait(10)
@@ -50,9 +43,8 @@ async def scrape_patch_notes(ctx):
     new_page_soup = BeautifulSoup(new_page_content, 'html.parser')
 
     # Retrieve all text content from the div containing the article text
-    div_in_href = new_page_soup.find('div', {'class': 'sectionWrapper NewsArticleContent-module--articleSectionWrapper--a5tPH'})
+    div_in_href = new_page_soup.find(find_content_div)
     text_content = div_in_href.get_text()
-
 
     # Close the WebDriver
     driver.quit()
@@ -64,13 +56,10 @@ async def scrape_patch_notes(ctx):
         await ctx.send(chunk)
     
 
-
-
 @client.event
 async def on_ready():
     print("The bot is ready for use")
     print("------------------------")
-
 
 @client.command()
 async def hello(ctx):
@@ -79,8 +68,16 @@ async def hello(ctx):
 @client.command()
 async def patchnotes(ctx):
      await scrape_patch_notes(ctx.channel)
- 
 
+def find_content_card(tag):
+    return tag.has_attr('href') and str.__contains__(tag['href'], "patch")
 
+def find_content_div(tag):
+    if tag.has_attr('class'):
+        for name in tag['class']:
+            if str.__contains__(name, "NewsArticleContent-module--articleSectionWrapper"):
+                return True
+    return False
 
-client.run('insert API key') 
+print("Running")
+client.run('MTI0MDM1NzYwNzgyMzM3NjQ4NQ.GqJetj.663H7kPRBeZXMAhfOirnADozEOh28ZKH9iDrLg')
